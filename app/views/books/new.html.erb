@@ -3,3 +3,16 @@
 <%= render 'form', book: @book %>
 
 <%= link_to 'Back', books_path %>
+
+<%= form_for(@book) do |form| %>
+
+<div >
+    <%= form.label :isbn , 'isbn' %>
+    <%= form.file_field :isbn, id: 'isbn' %>
+  </div>
+
+  <div >
+    <%= form.label :image ,'照片' %>
+    <%= form.file_field :image, id: '照片' %>
+  </div> 
+  <% end %>
