@@ -1,5 +1,15 @@
 <p id="notice"><%= notice %></p>
 
+<p id="notice"><%= notice %></p>
+<%= image_tag @book.image_url if @book.image_url.present? %>
+<p>
+...
+<p>
+  <strong>Name:</strong>
+  <%= @restaurant.name %>
+</p>
+
+
 <p>
   <strong>Title:</strong>
   <%= @book.title %>
@@ -17,3 +27,5 @@
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
+
+
