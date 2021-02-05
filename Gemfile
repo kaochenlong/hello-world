@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.2'
+ruby '2.7.0'
 
 gem 'rails', '~> 6.1.1'
 gem 'sqlite3', '~> 1.4'
@@ -32,6 +32,7 @@ group :development do
   gem 'listen', '~> 3.3'
   gem 'spring'
   gem 'foreman', '~> 0.87.2'
+  gem 'carrierwave'
 end
 
 group :test do
