@@ -85,6 +85,7 @@ GEM
     childprocess (3.0.0)
     concurrent-ruby (1.1.8)
     crass (1.0.6)
+    date (0.0.1)
     erubi (1.10.0)
     ffi (1.14.2)
     figaro (1.2.0)
@@ -231,6 +232,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   carrierwave (~> 2.1)
+  date (~> 0.0.1)
   figaro (~> 1.2)
   foreman (~> 0.87.2)
   isbn_validation
