@@ -32,6 +32,7 @@ group :development do
   gem 'listen', '~> 3.3'
   gem 'spring'
   gem 'foreman', '~> 0.87.2'
+  gem 'carrierwave'
 end
 
 group :test do
