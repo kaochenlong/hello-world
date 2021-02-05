@@ -11,3 +11,20 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.css'
+
+import $ from 'jquery';
+window.$ = $;
+
+global.moment = require('moment');
+require('tempusdominus-bootstrap-4');
+
+document.addEventListener('turbolinks:load', function(){
+
+  $(function () {
+      $('#datetimepicker1').datetimepicker();
+  });
+
+})
