@@ -1,23 +1,25 @@
-<p id="notice"><%= notice %></p>
+<div id="notice"><%= notice %></div>
 
-<p>
-  <%= image_tag @book.image_url if @book.image_url.present? %>
-</p>
+<div>
+  <%= image_tag @book.image_url(:thumb), class: 'img-thumbnail' if @book.image_url.present? %>
+</div>
 
-<p>
+<div class='m-2'>
   <strong>Title:</strong>
   <%= @book.title %>
-</p>
+</div>
 
-<p>
+<div class='m-2'>
   <strong>Content:</strong>
   <%= @book.content %>
-</p>
+</div>
 
-<p>
+<div class='m-2'>
   <strong>Publish date:</strong>
   <%= @book.publish_date %>
-</p>
+</div>
 
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+<div class='m-2'>
+  <%= link_to 'Edit', edit_book_path(@book), class: 'btn btn-outline-secondary btn-sm' %> |
+  <%= link_to 'Back', books_path, class: 'btn btn-outline-secondary btn-sm' %>
+</div>

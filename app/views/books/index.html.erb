@@ -2,8 +2,10 @@
 
 <h1>Books</h1>
 
-<table>
-  <thead>
+<%= link_to 'New Book', new_book_path, class:'btn btn-outline-secondary'%>
+
+<table class='table table-striped mt-1'>
+  <thead class="thead-dark">
     <tr>
       <th>Title</th>
       <th>Content</th>
@@ -18,9 +20,9 @@
         <td><%= book.title %></td>
         <td><%= book.content %></td>
         <td><%= book.publish_date %></td>
-        <td><%= link_to 'Show', book %></td>
-        <td><%= link_to 'Edit', edit_book_path(book) %></td>
-        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', book, class: 'btn btn-outline-secondary btn-sm' %></td>
+        <td><%= link_to 'Edit', edit_book_path(book), class: 'btn btn-outline-secondary btn-sm' %></td>
+        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-outline-secondary btn-sm' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +30,3 @@
 
 <br>
 
-<%= link_to 'New Book', new_book_path %>
