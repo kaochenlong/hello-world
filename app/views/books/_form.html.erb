@@ -9,22 +9,42 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class='input-group mb-3'>
+    <div class='input-group-prepend'>
+      <%= form.label :title, class: 'input-group-text' %>
+    </div>
+    <%= form.text_field :title, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
+  <div class='input-group mb-3'>
+    <div class='input-group-prepend'>
+      <%= form.label :content, class: 'input-group-text' %>
+    </div>
+    <%= form.text_area :content, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :publish_date %>
-    <%= form.date_select :publish_date %>
+  <div class='input-group mb-3'>
+    <div class='input-group-prepend'>
+      <%= form.label :publish_date, class: 'input-group-text' %>
+    </div>
+    <%= form.date_field :publish_date, value: Date.today, class: 'form-control' %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class='input-group mb-3'>
+    <div class='input-group-prepend'>
+      <%= form.label :isbn, class: 'input-group-text' %>
+    </div>
+    <%= form.text_field :isbn, class: 'form-control' %>
+  </div>
+
+  <div class='input-group mb-3'>
+    <div class='input-group-prepend'>
+      <%= form.label :image, class: 'input-group-text' %>
+    </div>
+    <%= form.file_field :image, class: 'form-control' %>
+  </div>
+
+  <div class="actions mb-3">
+    <%= form.submit class: 'btn btn-primary btn-sm' %>
   </div>
 <% end %>
