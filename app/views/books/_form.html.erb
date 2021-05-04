@@ -32,12 +32,19 @@
 
   <div class='input-group mb-3'>
     <div class='input-group-prepend'>
+      <%= form.label :isbn, class: 'input-group-text' %>
+    </div>
+    <%= form.text_field :isbn, class: 'form-control' %>
+  </div>
+
+  <div class='input-group mb-3'>
+    <div class='input-group-prepend'>
       <%= form.label :image, class: 'input-group-text' %>
     </div>
     <%= form.file_field :image, class: 'form-control' %>
   </div>
 
-  <div class="actions">
+  <div class="actions mb-3">
     <%= form.submit class: 'btn btn-primary btn-sm' %>
   </div>
 <% end %>
