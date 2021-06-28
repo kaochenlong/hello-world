@@ -7,18 +7,9 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
-import $ from "jquery"
-require('bootstrap-datepicker')
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-import "bootstrap-datepicker"
-
-
-document.addEventListener('turbolinks:load', ()=>{
-    $('.datepicker').datepicker({
-      multidate: true,
-      format: 'dd-mm-yyyy'
-    });
-})
+import "controllers"
+require("flatpickr/dist/flatpickr.css")
