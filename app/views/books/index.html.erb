@@ -1,32 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Books</h1>
-
-<table>
-  <thead>
+<h1 class="font-bold text-3xl mb-3">Books</h1>
+<%= link_to 'New Book', new_book_path , class: "font-bold text-2xl my-2 hover:bg-white hover:text-black "%>
+<table class="table-auto w-full">
+  <thead class="border">
     <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th>Publish date</th>
-      <th colspan="3"></th>
+      <th class="border">Title</th>
+      <th class="border">Content</th>
+      <th class="border">Publish date</th>
+      <th class="border">image</th>
+      <th class="border" colspan="3">options</th>
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="">
     <% @books.each do |book| %>
-      <tr>
-        <td><%= book.title %></td>
-        <td><%= book.content %></td>
-        <td><%= book.publish_date %></td>
-        <td><%= image_tag book.image_url if book.image_url.present? %></td>
-        <td><%= link_to 'Show', book %></td>
-        <td><%= link_to 'Edit', edit_book_path(book) %></td>
-        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <tr class="">
+        <td class="border p-2"><%= book.title %></td>
+        <td class="border p-2"><%= book.content %></td>
+        <td class="border p-2"><%= book.publish_date %></td>
+        <td class="border p-2"><%= image_tag book.image_url if book.image_url.present? %></td>
+        <td class="border p-2"><%= link_to 'Show', book %></td>
+        <td class="border p-2"><%= link_to 'Edit', edit_book_path(book) %></td>
+        <td class="border p-2"><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Book', new_book_path %>

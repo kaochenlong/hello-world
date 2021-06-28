@@ -1,19 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @book.title %>
-</p>
+<div class="max-w-3xl m-auto border flex flex-col items-center text-left mt-6 py-2">
+  <div class="py-2">
+    <strong>Title:</strong>
+    <%= @book.title %>
+  </div>
+  
+  <div class="py-2">
+    <strong>Content:</strong>
+    <%= @book.content %>
+  </div>
+  
+  <div class="py-2">
+    <strong>Publish date:</strong>
+    <%= @book.publish_date %>
+  </div>
+  
+  <div class="py-2">
+    <strong>img:</strong>
+    <%= image_tag @book.image_url if @book.image_url.present? %>
+  </div>
+</div>
 
-<p>
-  <strong>Content:</strong>
-  <%= @book.content %>
-</p>
-
-<p>
-  <strong>Publish date:</strong>
-  <%= @book.publish_date %>
-</p>
-
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+<%= link_to 'Edit', edit_book_path(@book), class: "block max-w-3xl m-auto text-center fon-bold text-2xl py-2 my-2 hover:bg-black hover:text-white" %> |
+<%= link_to 'Back', books_path, class: "block max-w-3xl m-auto text-center fon-bold text-2xl py-2 my-2 hover:bg-black hover:text-white" %>
