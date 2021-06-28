@@ -21,7 +21,7 @@
 
   <div class="field">
     <%= form.label :publish_date %>
-    <%= form.date_select :publish_date %>
+    <%= form.text_field :publish_date, "data-provide" => 'datepicker' %>
   </div>
 
   <div class="field">
@@ -33,3 +33,7 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+
+
+

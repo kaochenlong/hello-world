@@ -10,6 +10,7 @@ class BooksController < ApplicationController
 
   def new
     @book = Book.new
+    @book.publish_date = Time.now
   end
 
   def edit
