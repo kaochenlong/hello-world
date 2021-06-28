@@ -10,6 +10,7 @@ class BooksController < ApplicationController
 
   def new
     @book = Book.new
+    @book.publish_date = Time.now
   end
 
   def edit
@@ -44,6 +45,6 @@ class BooksController < ApplicationController
     end
 
     def book_params
-      params.require(:book).permit(:title, :content, :publish_date)
+      params.require(:book).permit(:title, :content, :publish_date, :image)
     end
 end
