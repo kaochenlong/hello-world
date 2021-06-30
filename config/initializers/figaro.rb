@@ -1,1 +1,1 @@
-Figaro.require_keys("cancan_api_key", "cancan_license_key")
+Figaro.require_keys(ENV["cancan_api_key"], ENV["cancan_license_key"])
