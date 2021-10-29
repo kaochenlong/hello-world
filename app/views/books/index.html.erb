@@ -8,6 +8,7 @@
       <th>Title</th>
       <th>Content</th>
       <th>Publish date</th>
+      <th>Cover image</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +19,7 @@
         <td><%= book.title %></td>
         <td><%= book.content %></td>
         <td><%= book.publish_date %></td>
+        <td><%= image_tag book.image_url, size: "100x100" if book.image_url.present? %></td>
         <td><%= link_to 'Show', book %></td>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
