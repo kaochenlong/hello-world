@@ -9,6 +9,11 @@
     </div>
   <% end %>
 
+  <div>
+    <%= form.label :cover %>
+    <%= form.file_field :cover, class: 'input-field' %>
+  </div>
+
   <div class="field">
     <%= form.label :title %>
     <%= form.text_field :title %>

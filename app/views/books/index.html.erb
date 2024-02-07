@@ -16,6 +16,7 @@
   <tbody>
     <% @books.each do |book| %>
       <tr>
+        <td><%= book_cover_sm(book) %></td>
         <td><%= book.title %></td>
         <td><%= book.isbn %></td>
         <td><%= book.content %></td>
