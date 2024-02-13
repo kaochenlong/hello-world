@@ -29,9 +29,13 @@
     <%= form.text_area :content %>
   </div>
 
-  <div class="field">
+  <div>
     <%= form.label :publish_date %>
-    <%= form.date_select :publish_date %>
+    <%= form.text_field :publish_date,
+                    data: {
+                          controller: 'datepicker',
+                          },
+                    class: 'input input-bordered' %>
   </div>
 
   <div class="actions">
