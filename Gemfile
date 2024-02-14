@@ -24,7 +24,6 @@ group :development do
   gem 'listen', '~> 3.3'
   gem 'spring'
   gem 'web-console', '>= 4.1.0'
-  gem 'sqlite3', '~> 1.4'
 end
 
 group :test do
