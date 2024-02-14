@@ -1,8 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Books</h1>
-
-<table>
+<h2>Books</h2>
+<table class="table">
   <thead>
     <tr>
       <th>Cover</th>
@@ -22,9 +21,9 @@
         <td><%= book.isbn %></td>
         <td><%= book.content %></td>
         <td><%= book.publish_date %></td>
-        <td><%= link_to 'Show', book %></td>
-        <td><%= link_to 'Edit', edit_book_path(book) %></td>
-        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', book, class: 'btn btn-outline-secondary btn-sm' %></td>
+        <td><%= link_to 'Edit', edit_book_path(book), class: 'btn btn-outline-secondary btn-sm' %></td>
+        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-outline-danger btn-sm' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New Book', new_book_path %>
+<%= link_to 'New Book', new_book_path, class: 'btn btn-outline-secondary' %>

@@ -13,6 +13,9 @@ gem 'sass-rails', '>= 6'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
 gem 'image_processing', '~> 1.12'
+gem 'bootstrap', '~> 4.6.2'
+
+
 
 
 group :development, :test do
