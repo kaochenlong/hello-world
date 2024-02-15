@@ -1,14 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h2>Books</h2>
+<h2><%= t('books') %></h2>
 <table class="table">
   <thead>
     <tr>
-      <th>Cover</th>
-      <th>Title</th>
+      <th><%= t('cover') %></th>
+      <th><%= t('title') %></th>
       <th>Isbn</th>
-      <th>Content</th>
-      <th>Publish date</th>
+      <th><%= t('publish_date') %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,11 +18,10 @@
         <td><%= book_cover_sm(book) %></td>
         <td><%= book.title %></td>
         <td><%= book.isbn %></td>
-        <td><%= book.content %></td>
         <td><%= book.publish_date %></td>
-        <td><%= link_to 'Show', book, class: 'btn btn-outline-secondary btn-sm' %></td>
-        <td><%= link_to 'Edit', edit_book_path(book), class: 'btn btn-outline-secondary btn-sm' %></td>
-        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-outline-danger btn-sm' %></td>
+        <td><%= link_to t('show'), book, class: 'btn btn-outline-secondary btn-sm' %></td>
+        <td><%= link_to t('edit'), edit_book_path(book), class: 'btn btn-outline-secondary btn-sm' %></td>
+        <td><%= link_to t('destroy'), book, method: :delete, data: { confirm: t('sure') }, class: 'btn btn-outline-danger btn-sm' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -31,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Book', new_book_path, class: 'btn btn-outline-secondary' %>
+<%= link_to t('newbook'), new_book_path, class: 'btn btn-outline-secondary' %>

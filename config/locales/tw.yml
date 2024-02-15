@@ -1,0 +1,45 @@
+tw:
+  welcome: "歡迎來到首頁，前往書籍列表"
+  books: "書籍列表"
+  home: "首頁"
+  newbook: "新增書籍"
+  cover: "封面"
+  title: "標題"
+  content: "內容"
+  publish_date: "發行日期"
+  submit: "送出"
+  edit_book: "編輯書籍"
+  back: "返回"
+  show: "詳細"
+  edit: "編輯"
+  destroy: "刪除"
+  sure: "確定刪除?"
+  book_created: '書籍已成功創建。'
+  book_updated: '書籍已成功更新。'
+  book_destroyed: '書籍已成功刪除。'
+
+  activerecord:
+    attributes:
+      book:
+        title: "書籍標題"
+        isbn: "ISBN"
+        publish_date: "出版日期"
+    errors:
+      models:
+        book:
+          attributes:
+            title:
+              blank: "標題不能為空"
+            isbn:
+              blank: "ISBN不能為空"
+              format: "ISBN格式應為13碼或10碼"
+            publish_date:
+              blank: "出版日期不能為空"
+      messages:
+        blank: "不能為空"
+  placeholders:
+    enter_title: "請輸入標題"
+    enter_isbn: "請輸入13碼或10碼的ISBN"
+    enter_content: "請輸入內容"
+    enter_publish_date: "請輸入出版日期"
+  

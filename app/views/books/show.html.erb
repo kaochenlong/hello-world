@@ -1,19 +1,24 @@
-<p id="notice"><%= notice %></p>
+<div class="container text-center">
+  <p id="notice"><%= notice %></p>
 
-<div class="card" style="width: 12rem;">
-  <%= book_cover(@book) %>
-  <div class="card-body">
-    <h5 class="card-title"><%= @book.title %></h5>
-    <p class="card-text"><%= @book.content %></p>
+  <div class="card mb-3 mx-auto" style="max-width: 900px;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <%= book_cover(@book) %>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title"><%= @book.title %></h5>
+          <p class="card-text text-secondary">ISBN:<%= @book.isbn %></p>
+          <p class="card-text text-secondary"><%= t('publish_date')%>:<%= @book.publish_date %></p>
+          <p class="card-text"><%= simple_format @book.content %></p>
+        </div>
+      </div>
+    </div>
   </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">ISBN:<%= @book.isbn %></li>
-    <li class="list-group-item"><%= @book.publish_date %></li>
-  </ul>
+
   <div class="card-body">
-    <%= link_to 'Edit', edit_book_path(@book), class: 'card-link' %> |
-    <%= link_to 'Back', books_path %>
+    <%= link_to t('edit'), edit_book_path(@book), class: 'btn btn-outline-primary' %> |
+    <%= link_to t('back'), books_path, class: 'btn btn-outline-secondary' %>
   </div>
 </div>
-
-

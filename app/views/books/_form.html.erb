@@ -10,36 +10,36 @@
   <% end %>
   <form>
     <div class="form-group">
-      <%= form.label :cover %>
+      <%= form.label :cover, t('cover') %>
       <%= form.file_field :cover, class: 'input-field' %>
     </div>
     <div class="form-group">
-      <%= form.label :title %>
-      <%= form.text_field :title, class: "form-control", placeholder: "Enter Title" %>
+      <%= form.label :title, t('title') %>
+      <%= form.text_field :title, class: "form-control", placeholder: t('title') %>
     </div>
 
     <div class="form-group">
-      <%= form.label :isbn %>
-      <%= form.text_field :isbn, class: "form-control", placeholder: "Enter 13 or 10 isbn" %>
+      <%= form.label :isbn%>
+      <%= form.text_field :isbn, class: "form-control", placeholder: t('placeholders.enter_isbn') %>
     </div>
 
     <div class="form-group">
-      <%= form.label :content %>
-      <%= form.text_area :content, class: "form-control", placeholder: "Enter content" %>
+      <%= form.label :content, t('content')  %>
+      <%= form.text_area :content, class: "form-control", placeholder: t('content') %>
     </div>
 
     <div class="form-group">
-      <%= form.label :publish_date %>
+      <%= form.label :publish_date, t('publish_date')  %>
       <%= form.text_field :publish_date,
                       data: {
                             controller: 'datepicker',
                             },
                       class: 'form-control',
-                      placeholder: "Enter publish day" %>
+                      placeholder: t('publish_date') %>
     </div>
 
     <div class="actions">
-      <%= form.submit "Submit", class: "btn btn-primary" %>
+      <%= form.submit t('submit'), class: "btn btn-primary" %>
     </div>
   </form>
 <% end %>

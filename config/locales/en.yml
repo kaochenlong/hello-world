@@ -1,33 +1,44 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  welcome: "Welcome to the homepage, go to the book list"
+  books: "Book List"
+  home: "Home"
+  newbook: "Add New Book"
+  cover: "Cover"
+  title: "Title"
+  content: "Content"
+  publish_date: "Publish Date"
+  submit: "Submit"
+  edit_book: "Edit Book"
+  back: "Back"
+  show: "Details"
+  edit: "Edit"
+  destroy: "Delete"
+  sure: "Are you sure?"
+  book_created: 'Book was successfully created.'
+  book_updated: 'Book was successfully updated.'
+  book_destroyed: 'Book was successfully destroyed.'
+
+  activerecord:
+    attributes:
+      book:
+        title: "Book Title"
+        isbn: "ISBN"
+        publish_date: "Publish Date"
+    errors:
+      models:
+        book:
+          attributes:
+            title:
+              blank: "Title can't be blank"
+            isbn:
+              blank: "ISBN can't be blank"
+              format: "ISBN should be 13 or 10 digits"
+            publish_date:
+              blank: "Publish date can't be blank"
+      messages:
+        blank: "can't be blank"
+  placeholders:
+    enter_title: "Enter title"
+    enter_isbn: "Enter 13 or 10 digits ISBN"
+    enter_content: "Enter content"
+    enter_publish_date: "Enter publish date"
