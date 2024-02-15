@@ -6,11 +6,7 @@ import 'flatpickr/dist/flatpickr.min.css';
 export default class extends Controller {
   connect() {
     flatpickr(this.element, {
-      minDate: "today",
-      enableTime: true,
-      minuteIncrement: 30,
-      defaultMinute: 0,
-      defaultHour: 0,
+      enableTime: false,
     });
   }
 }
