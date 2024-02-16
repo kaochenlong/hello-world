@@ -1,1 +1,3 @@
-Figaro.require_keys("cancan_api_key", "cancan_license_key")
+# frozen_string_literal: true
+
+Figaro.require_keys('api_key', 'license_key')
